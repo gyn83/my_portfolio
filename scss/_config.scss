@@ -1,0 +1,71 @@
+$primary-color: #1e272e;
+$secondary-color: #f9ca24;
+$show-home-image: true;
+$home-image: url(../img/background6.jpg);
+$background-opacity: 0.8;
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+
+
+ @mixin easeOut  {
+	transition: all 0.3s ease-out;
+}
+
+@mixin background {
+	@if $show-home-image {
+		&#bg-img {
+			background: $home-image; 
+			background-attachment: fixed;
+			background-size: cover;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background:  rgba($primary-color, $background-opacity);
+			}
+
+		}
+		
+	}
+}
+
+// Set Text Color 
+@function set-text-color($color) {
+	@if (lightness($color) > 40 ) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
+}
+
+// Media Query Mixins 
+@mixin mediaSm {
+	@media screen and (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin mediaMd {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+
+@mixin mediaLg {
+	@media screen and (min-width: 769 px) and (max-width: 1170px) {
+		@content;
+	}
+}
+
+
+@mixin mediaXl {
+	@media screen and (min-width: 1171px) {
+		@content;
+	}
+}
