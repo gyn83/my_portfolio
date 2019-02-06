@@ -174,8 +174,13 @@ main {
     grid-area: job3; }
   .about-info .job {
     background: #28343d;
-    padding: 0.5rem;
-    border-bottom: #f9ca24 5px solid; }
+    padding: 1rem;
+    border-bottom: #f9ca24 5px solid;
+    letter-spacing: 2px;
+    line-height: 2; }
+    .about-info .job h3 {
+      text-transform: uppercase;
+      color: #f9ca24; }
 
 .projects {
   display: grid;
@@ -235,7 +240,7 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769 px) and (max-width: 1170px) {
   .projects {
@@ -276,8 +281,14 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
-    font-size: 4rem; }
-  #work h1 {
-    font-size: 4rem; }
+    font-size: 2.5rem;
+    line-height: 1.5; }
+  #work h1,
+  #about h1,
+  #contact h1 {
+    font-size: 4rem;
+    line-height: 1.5; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #contact .boxes div {
+    font-size: 1rem; } }
