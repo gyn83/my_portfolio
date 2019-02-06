@@ -18,6 +18,7 @@ body {
     line-height: 1.5;
 }
 
+
 // Headings 
 
 h1, h2, h3 {
@@ -112,8 +113,15 @@ main {
     }
     .job {
         background: lighten($primary-color, 5);
-        padding: 0.5rem;
+        padding: 1rem;
         border-bottom: $secondary-color 5px solid;
+        letter-spacing: 2px;
+        line-height: 2;
+
+        h3 {
+            text-transform: uppercase;
+            color: $secondary-color;
+        }
     }
 
 }
